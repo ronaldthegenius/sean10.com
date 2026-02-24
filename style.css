@@ -10,6 +10,7 @@
     outline: none;
     scroll-behavior:smooth;
     margin: 0;
+    text-align: center;
     
 }
 
@@ -1266,20 +1267,23 @@ font-weight: bolder;
  }
 
  .products-preview .preview{
-  /* display: none; */
-  top: 5rem;
-  padding: 2rem;
-  text-align: center;
-  background: #fff;
-  position: relative;
-  margin: 2rem;
-  width: 80%;
-  font-family: 'Courier New', Courier, monospace;
-  height: 700px; /* or any specific height you want */
-  overflow: auto;
-  justify-content: center;
-  align-items: center;
-  /* display: none; */
+    /* display: none; */
+    top: 5rem;
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin: 2rem;
+    width: 80%;
+    height: 85vh;
+    height: 85dvh;
+    font-family: 'Courier New', Courier, monospace;
+    /* height: 700px; */
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+    margin-bottom: 5rem;
 }
 
  .products-preview.active{
@@ -1577,8 +1581,8 @@ font-weight: bolder;
  .products-preview .preview p{
   line-height: 1.5;
   padding: 1rem 0;
-  font-size: 1.5rem;
-  color: #777;
+  font-size: clamp(1rem, calc(3vw + 1rem), 2rem);
+  color: #999;
   text-transform:capitalize;
   font-weight: bolder;
  }
@@ -1624,7 +1628,7 @@ font-weight: bolder;
 
  .products-preview .preview .buttons a{
   width: fit-content;
-  padding: 1rem;
+  padding: min(1rem, 2%);
   font-size: 1.8rem;
   color: #444;
   border: .1rem solid #444;
@@ -1643,12 +1647,27 @@ font-weight: bolder;
   background: #27ae60;
  }
 
- .products-preview .preview .buttons a.donate{
+ .products-preview .preview .buttons button{
+  padding: min(1rem, 5%);
+  cursor: pointer;
+  border-radius: 20px;
   background:radial-gradient(#000,rgb(86, 218, 86));
   color: #fff;
  }
 
- .products-preview .preview .buttons a.donate:hover{
+ .products-preview .preview .buttons button:hover{
+  /* background: #444; */
+  background:  #27ae60;;
+  color: #fff;
+ }
+
+ .products-preview .preview .buttons a .donations{
+  padding: min(1rem, 5%);
+  background:radial-gradient(#000,rgb(86, 218, 86));
+  color: #fff;
+ }
+
+ .products-preview .preview .buttons a .donations:hover{
   /* background: #444; */
   background:  #27ae60;;
   color: #fff;
@@ -1656,7 +1675,85 @@ font-weight: bolder;
 
  /* end of preview */
 
+  /* START OF donate */
+  section .donations{
+    /* start of sean glass */
+  background: #000;
+   border: groove 2px;
+   /* font-size: clamp(1rem, calc(5vw + 1rem), 2rem); */
+    height: 50dvh;
+    height: 50vh;
+    padding: min(2rem, 10%);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-transform: lowercase;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 41% 15% 67% 20%;
+    font-weight: 600;
+  }
 
+  
+  section .donations .airtel {
+       background: blue;
+    font-family: cursive;
+    border: #000 1px unset;
+    border-radius: 10% 20% 70%;
+    padding: min(1rem, 10%);
+    color: #999;
+    box-shadow: 4px 5px 1px red;
+    font-size: clamp(1rem, calc(3vw + 1rem), 2rem);
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+section .donations .airtel-link:hover{
+  color: #000;
+  background: #fff;
+  font-size: clamp(2rem, calc(3vw + 1rem), 3rem);
+}
+ 
+
+
+  section .donations .myNumber{
+    align-items: center;
+    justify-content: center;
+    color: orchid;
+    box-shadow: 4px 5px 1px green;
+    font-size: clamp(4rem, calc(3vw + 1rem), 2rem);
+    margin-top: 2rem;
+    
+  }
+
+  section .donations .myNumber:hover{
+    align-items: center;
+    justify-content: center;
+    color: green;
+    box-shadow: 1px 2px  5px 7px green;
+    font-size: clamp(2rem, calc(3vw + 1rem), 2rem);
+   
+  }
+
+  section .donations span{
+    align-items: center;
+    justify-content: center;
+    color: green;
+    box-shadow: 1px 2px  5px 7px green;
+    font-size: clamp(2rem, calc(3vw + 1rem), 1rem);
+  }
+
+  section .donations span:hover{
+    align-items: center;
+    justify-content: center;
+    color: orangered;
+    box-shadow: 1px 2px  5px 7px green;
+    font-size: clamp(0.5rem, calc(3vw + 1rem), 1rem);
+  }
+
+  /* END OF donate */
 
   /* END OF PROJECTS */
 
@@ -2109,8 +2206,8 @@ word-break: break-all;
 
 .games-container{
   width: 100%;
-  align-items: center;
-  justify-items: center;
+  align-content: center;
+  justify-content: space-between;
   font-family: 'poppins',sans-serif;
   border-radius: 10px;
   border: grey 1px dotted;
@@ -2123,36 +2220,46 @@ word-break: break-all;
 
 
 
+.games-container  h2{
+  text-align: center;
+  display: flex; /* Activates Flexbox */
+    flex-wrap: wrap; /* Allows links to stack on mobile phones */
+    justify-content: space-evenly; /* Spreads links out horizontally */
+    align-items: center; /* Centers links vertically */
+    
+    margin: 0; /* Removes default H2 spacing */
+    width: 100%; /* Ensures it spans the whole container */
+    gap: 20px; /* Adds a physical gap between the two links */
+    padding: 15px 0; /* Adds some padding for height */
+}
 
 
 
 
-.games-container h2 {
- padding: 5px 5px;
-  font-size: 2em;
-  width: fit-content;
-  /* align-items: center; */
-  color: #000;
-  text-shadow: 2px 2px #fff;
-  background:  linear-gradient(rgb(148, 165, 165),rgb(11, 8, 8));
-  border: #007bff inset 2px;
-  letter-spacing: 3px;
-  border-radius: 10px;
-  margin-top: 1em;
-  font-weight: 1000;
+.games-container  h2 a{
+  /* border: red 1px solid; */
+ padding:min(1em, 17%) ;
+ color: #fff;
+  font-size: clamp(1.8rem,calc(5vw + 1rem), 2.5rem);
   text-transform: uppercase;
      /* limit number of words 👍👍👉*/
-     display: -webkit-box;
-     -webkit-line-clamp: 1; /* Limits to one line */
-     -webkit-box-orient: vertical;
-     overflow: hidden; /* Ensures content is clipped */
-     text-overflow: ellipsis; /* Adds the "..." if the text overflows */
-     white-space: nowrap; /* Prevents text from wrapping to the next line*/
+     /* display: -webkit-box; */
+     /* -webkit-line-clamp: 1; Limits to one line */
+     /* -webkit-box-orient: vertical; */
+     /* overflow: hidden; Ensures content is clipped */
+     /* text-overflow: ellipsis; Adds the "..." if the text overflows */
+     /* white-space: nowrap; Prevents text from wrapping to the next line */
+     /* Optional: Makes the links look like buttons */
+     
+}
+
+.games-container  h2 a:hover{
+  font-size: clamp(1rem,calc(5vw + 1rem), 2rem);
      
 }
 
 
-.games-container h2 span  {
+.games-container  h2 span  {
   text-shadow: none;
   color: var(--main-color);
   margin-left: 3rem;
@@ -2161,36 +2268,41 @@ word-break: break-all;
   background: #fff;
   padding: 2px 4px;
   border-radius: 0px 10px 10px 0px ;
- 
-  /* 
-   1. top-left corner
-   2.top-right corner
-   3.bottom-right corner
-   4.bottom-left corner
-So, for the border-radius: 0px 10px 10px 0px; declaration: */
+ font-size: clamp(1.8rem,calc(5vw + 1rem), 1.5rem);
 
 }
+
+
+.games-container  h2 span:hover{
+  font-size: clamp(1rem,calc(5vw + 1rem), 2rem);
+     
+}
+
 
 
 .games-container .buttons {
-  justify-content: space-between;
+  text-align: center;
+  justify-content: space-evenly;
   align-items: center;
   display: flex;
+  flex-wrap:wrap ;
   margin-top: 10px;
-  width: 70%;
+  gap: 3rem;
+ 
 }
 
 .games-container button{
-  font-size: 12px;
+  font-size: clamp(1.8rem,calc(5vw + 1rem), 1rem);
   font-family: 'poppins', sans-serif;
   font-weight: bold;
   color: #fff;
   padding: 3px 10px;
   cursor: pointer;
   border-radius: 9px;
+  
 
   
-  /* box-shadow: 10px 10px 5px 2px #f0c; */
+  box-shadow: 10px 10px 5px 2px #f0c;
    /* start of sean glass */
    background: rgba(255, 255, 255, 0.2);
    backdrop-filter: blur(10px);
@@ -2408,70 +2520,78 @@ font-size: 12px;
 }
 
 
+.softwares-container  h2{
+  display: flex; /* Activates Flexbox */
+    flex-wrap: wrap; /* Allows links to stack on mobile phones */
+    justify-content: space-evenly; /* Spreads links out horizontally */
+    align-items: center; /* Centers links vertically */
+    
+    margin: 0; /* Removes default H2 spacing */
+    width: 100%; /* Ensures it spans the whole container */
+    gap: 20px; /* Adds a physical gap between the two links */
+    padding: 15px 0; /* Adds some padding for height */
+}
 
 
-.softwares-container h2 {
- padding: 5px 5px;
-  font-size: 2em;
-  width: fit-content;
-  /* align-items: center; */
-  color: #000;
-  text-shadow: 2px 2px #fff;
-  background:  linear-gradient(rgb(148, 165, 165),rgb(11, 8, 8));
-  border: #007bff inset 2px;
-  letter-spacing: 3px;
-  border-radius: 10px;
-  margin-top: 1em;
-  font-weight: 1000;
-  /* width: 95%; */
+
+
+.softwares-container  h2 a{
+  /* border: red 1px solid; */
+ padding:min(1em, 17%) ;
+ color: #fff;
+  font-size: clamp(1.8rem,calc(5vw + 1rem), 2.5rem);
   text-transform: uppercase;
-     /* limit number of words 👍👍👉*/
-     display: -webkit-box;
-     -webkit-line-clamp: 1; /* Limits to one line */
-     -webkit-box-orient: vertical;
-     overflow:hidden; /* Ensures content is clipped */
-     text-overflow: ellipsis; /* Adds the "..." if the text overflows */
-     white-space: nowrap; /* Prevents text from wrapping to the next line*/
+     
+}
+
+.softwares-container  h2 a:hover{
+  font-size: clamp(1rem,calc(5vw + 1rem), 2rem);
      
 }
 
 
-.softwares-container h2 span  {
+.softwares-container  h2 span  {
   text-shadow: none;
   color: var(--main-color);
   margin-left: 3rem;
+  font-family: 'poppins',sans-serif;
   text-transform: lowercase;
   background: #fff;
-  padding: 2px 3px;
+  padding: 2px 4px;
   border-radius: 0px 10px 10px 0px ;
-  /* 
-   1. top-left corner
-   2.top-right corner
-   3.bottom-right corner
-   4.bottom-left corner
-So, for the border-radius: 0px 10px 10px 0px; declaration: */
+ font-size: clamp(1.8rem,calc(5vw + 1rem), 1.5rem);
 
 }
+
+
+.softwares-container  h2 span:hover{
+  font-size: clamp(1rem,calc(5vw + 1rem), 2rem);
+     
+}
+
 
 
 .softwares-container .buttons {
-  justify-content: space-between;
+  text-align: center;
+  justify-content: space-evenly;
   align-items: center;
   display: flex;
+  flex-wrap:wrap ;
   margin-top: 10px;
-  width: 70%;
+  gap: 3rem;
 }
 
 .softwares-container button{
-  font-size: 12px;
+ font-size: clamp(1.8rem,calc(5vw + 1rem), 1rem);
   font-family: 'poppins', sans-serif;
   font-weight: bold;
   color: #fff;
   padding: 3px 10px;
   cursor: pointer;
   border-radius: 9px;
+
   
-  /* box-shadow: 10px 10px 5px 2px #f0c; */
+  box-shadow: 10px 10px 5px 2px #f0c;
    /* start of sean glass */
    background: rgba(255, 255, 255, 0.2);
    backdrop-filter: blur(10px);
@@ -3230,6 +3350,14 @@ justify-content: space-evenly;
 
 /* START OF 600PX  */
 @media screen and (max-width: 600px) {
+  *{
+    font-size: clamp(1.8rem,calc(5vw + 1rem), 1rem);
+    margin: 0;
+    padding: 0;
+    /* height: 100vh;
+    height: 100dvh; */
+    text-align: center;
+  }
 
   
   .header {
@@ -3579,7 +3707,7 @@ justify-content: space-evenly;
  .products-preview{
  background: #000; 
         overflow-y: scroll;
-        padding-bottom: 12em;
+        padding-bottom: 8em;
  }
 
  .products-preview .preview{
@@ -3810,6 +3938,11 @@ background: #000;
 
  .products-preview .preview .buttons a{
  /*  */
+ width:fit-content;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: max-content;
  }
 
  .products-preview .preview .buttons a.join{
@@ -3819,6 +3952,21 @@ background: #000;
  .products-preview .preview .buttons a.join:hover{
   /*  */
  }
+
+  .products-preview .preview .buttons button{
+  width:fit-content;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: max-content;
+ }
+
+ .products-preview .preview .buttons button:hover{
+  /* background: #444; */
+  /* background:  #27ae60;;
+  color: #fff; */
+ }
+
 
  .products-preview .preview .buttons a.donate{
  /*  */
@@ -3831,6 +3979,94 @@ background: #000;
  /* end of preview */
 
 
+  /* START OF donate */
+  section .donations{
+    /* start of sean glass */
+  background: #000;
+  color: #fff;
+   border: #c0c dotted 6px;
+   /* font-size: clamp(1rem, calc(5vw + 1rem), 2rem); */
+    /* height: 50dvh;
+    height: 50vh;
+    padding: min(2rem, 10%);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-transform: lowercase;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 41% 15% 67% 20%;
+    font-weight: 600; */
+  }
+
+  
+  section .donations p{
+       /* background: #fff;
+    font-family: cursive;
+    border: #000 1px unset;
+    border-radius: 10% 20% 70%;
+    padding: min(1rem, 10%);
+    color: green;
+    box-shadow: 4px 5px 1px red;
+    font-size: clamp(1rem, calc(3vw + 1rem), 2rem);
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center; */
+  }
+
+
+  section .donations .airtel{
+    /* text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-family: "poppins", sans-serif;
+    box-shadow: 4px 5px 1px, orangered;
+    font-size: clamp(1rem, calc(5vw + 1rem), 2rem);
+    margin-top: 2rem; */
+  }
+ 
+
+
+  section .donations .myNumber{
+    /* align-items: center;
+    justify-content: center;
+    color: orchid;
+    box-shadow: 4px 5px 1px green;
+    font-size: clamp(4rem, calc(3vw + 1rem), 2rem);
+    margin-top: 2rem; */
+    
+  }
+
+  section .donations .myNumber:hover{
+    /* align-items: center;
+    justify-content: center;
+    color: green;
+    box-shadow: 1px 2px  5px 7px green;
+    font-size: clamp(2rem, calc(3vw + 1rem), 2rem); */
+   
+  }
+
+  section .donations span{
+    /* align-items: center;
+    justify-content: center;
+    color: green;
+    box-shadow: 1px 2px  5px 7px green;
+    font-size: clamp(2rem, calc(3vw + 1rem), 1rem); */
+  }
+
+  section .donations span:hover{
+    /* align-items: center;
+    justify-content: center;
+    color: orangered;
+    box-shadow: 1px 2px  5px 7px green;
+    font-size: clamp(0.5rem, calc(3vw + 1rem), 1rem); */
+  }
+
+  /* END OF donate */
 /* end of projects */
 
 /* read-more */
@@ -3960,224 +4196,6 @@ font-size: 12px;
 
 
 
-
-/* start of games */
-
-.games-container  {
-  overflow: hidden;
-  font-family: 'Courier New', Courier, monospace;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 30px;
-}
-
-
-
-
-.games-container h2 {
-  width: fit-content;
-  font-size: 10px;
-  letter-spacing: 1px;
-  text-shadow: none;
-  color: #fff;
-  justify-content: center;
- align-items: center;
- }
-     
-
-
-
-.games-container h2 span  {
- color: #000;
- margin-left: 0px;
- display: flex;
- flex-wrap: wrap;
- position: relative;
- border-radius: 10px 0px;
- justify-content: center;
- align-items: center;
-}
-
-.games-container .buttons{
-  display:grid;
-  width: fit-content;
-  
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-}
-
-.games-container button{
- font-size: 10px;
-  padding: 3px 3px;
-  font-family: 'Courier New', Courier, monospace;
-  color: #fff;
-  background-color: blue;
-  
-}
-
-.games-container .card-container{
-  margin-top: 15px;
-  
-}
-
-
-
-  
-.games-container .card-container .gamecard h3  {
-  font-size: 12px;
- 
-}
-
-.games-container .card-container .gamecard{
-  grid-template-columns: repeat(auto, minmax(200px, 1fr));
-
-}
-
-
-
-.games-container .card-container .gamecard .batton{
-/*  */
- 
-}
-
-.games-container .card-container .gamecard .batton:hover{
- width: 100%;
- border-radius: 10px;
-}
-
-
-/* END OF games */
-
-
-
-
-
-
- 
-/* START OF SOFTWARES */
-
-/* Target the heading element within the section */
-
-
-  
-
-.softwares-container  {
-  overflow: hidden;
-  font-family: 'Courier New', Courier, monospace;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 30px;
-}
-
-
-
-
-.softwares-container h2 {
-  width: fit-content;
-  font-size: 10px;
-  letter-spacing: 1px;
-  text-shadow: none;
-  color: #fff;
-  justify-content: center;
- align-items: center;
- }
-     
-
-
-
-.softwares-container h2 span  {
- color: #000;
- margin-left: 0px;
- display: flex;
- flex-wrap: wrap;
- position: relative;
- border-radius: 10px 0px;
- justify-content: center;
- align-items: center;
-}
-
-
-.softwares-container .buttons{
-  display:grid;
-  width: fit-content;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-}
-
-.softwares-container button{
- font-size: 10px;
-  padding: 3px 3px;
-  font-family: 'Courier New', Courier, monospace;
-  color: #fff;
-  background-color: blue;
-}
-
-
-
-.softwares-container .card-container{
-  margin-top: 15px;
-  
-}
-
-
-
-  
-  .softwares-container .card-container .softwarescard h3  {
-  font-size: 12px;
- 
-}
-
-  
-  .softwares-container .card-container .softwarescard   {
-    grid-template-columns: repeat(auto, minmax(200px, 1fr));
-}
-
-
-
-
-
- .softwares-container .card-container .softwarescard .batton{
-/*  */
- 
-}
-
- .softwares-container .card-container .softwarescard  .batton:hover{
- width: 100%;
- border-radius: 10px;
-}
-
-
-/* END OF SOFTWARES */
-
-
-
-
-/* submit btn */
-.btn-box {
-  justify-self: center;
-  /* font-family: 'Courier New', Courier, monospace; */
-  font-size: 10px;
-  width: fit-content;
-}
-
-/*end of submit btn */
-
-
-
-
-  /* ... (rest of your styles) */
-
-
-
-
-/* END OF 600PX */
-
-
-
-/* START OF 768PX */
-/* Styles for larger screens (Tablets and Desktops - as before) */
 
  
  @media screen and (min-width: 601px) and (max-width: 768px)  {
