@@ -3580,7 +3580,7 @@ justify-content: space-evenly;
   }
 
   .btn-box .btn {
-  /* display: inline-flex; */
+  -webkit-writing-mode: vertical-lr;
         padding: 0.5rem;
         /* margin-bottom: 1rem; */
         margin: 2px;
