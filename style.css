@@ -3580,6 +3580,7 @@ justify-content: space-evenly;
 
   .btn-box .btn {
     display: block;
+    font-size: clamp(1.1rem, calc(1vw + 1rem), 1rem);
   /* -webkit-writing-mode: vertical-lr; */
         padding: 0.5rem;
         /* margin-bottom: 1rem; */
