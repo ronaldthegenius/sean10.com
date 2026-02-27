@@ -88,15 +88,22 @@ body {
     /* border: red solid 1px; */
     position: relative;
     padding: 5px 5px;
-    left: 7px;
+    padding: min(10rem, 1%);
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
+    /* font-size: clamp(1.4rem, calc(1vw + 1rem), 1rem); */
+    width: 15em;
 
   }
 
   .logo img {
-    border-radius: 8px;
     height: 5em;
-    width: 15em; 
+     width:15em;
+    border-radius: 8px;
   }
 
 
@@ -148,7 +155,7 @@ body {
 
  /* THE EMAIL CHAT */
   header .bx-chat {
-    font-size: clamp(1.4rem, calc(1vw + 1rem), 1rem);
+    font-size: clamp(2rem, calc(1vw + 1rem), 1rem);
     color: orange;
    padding: 5px 4px;
     font-weight: bolder;
@@ -251,19 +258,22 @@ body {
 
 /* START VIEWERS */
 .viewers  {
-   
-    display: flex; 
-    align-items: center; 
-    color: #fff; 
-    background-color: #333; 
-    padding: 5px 10px; 
-    border-radius: 5px;
+       display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+    background-color: #333;
+    padding: min(1rem, 5%);
+    gap: .1rem;
+    border-radius: 20px;
     
 }
 
 
 .viewers i {
-  font-size: 20px;
+  font-size: clamp(2rem, calc(5vw + 1rem), 1rem);
   color:#fff;
  /* bottom: 2px 2px; */
  opacity: 0.5;
@@ -275,7 +285,7 @@ body {
 
 .viewers p {
   color:black;
-  font-size: 10px;
+  font-size: clamp(1rem, calc(5vw + 1rem), 1rem);
   margin-top: 1px;
   position:relative;
   padding: 1px 1px;
@@ -522,7 +532,36 @@ section {
    padding: 10px 20px;
    margin: 10px 10px; /* Margin top and bottom */ 
 }
+.check{
+  gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+}
 
+.check p{
+  margin: 1rem;
+    font-size: clamp(1.5rem, calc(1vw + 1rem), 1rem);
+    font-family: cursive;
+}
+
+
+.check .span_1{
+    border: orangered 1px solid;
+    font-size: clamp(4rem, calc(1vw + 1rem), 1rem);
+    margin: 1rem;
+    border-radius: 20px;
+}
+
+.check .span_2{
+  font-size: clamp(4rem, calc(1vw + 1rem), 1rem);
+    margin: 1rem;
+    border-radius: 20px;
+    border: 1px green solid;
+}
 
 
 .home-content {
@@ -673,21 +712,7 @@ section {
    text-transform: uppercase;
 }
 
-.btn-box {
-    /* position: relative; */
-       display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    width: fit-content;
-    /* height: 5rem; */
-    /* border: red 1px solid; */
-   padding: 5px 5px;
-   /* left: 10px; */
-   bottom: 5px;
-   margin: 10px 10px; /* Margin top and bottom */
-}
+
 
 .btn-box .btn {
   margin: 1rem;
@@ -767,11 +792,11 @@ section {
 /*dOWNLOAD CV button*/
 
 .btn-box .download { 
-   justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
+   display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
  /* font-weight: bold; */
  margin: 1rem;
  text-decoration: none;
@@ -811,26 +836,6 @@ section {
 
 
 
-
-   /*media icons*/
-
-.home-sci {
-    position: absolute;
-    /* margin-left: 30px; */
-    /* bottom: 4rem; */
-    width: fit-content; 
-    overflow: hidden;
-    /* cursor: pointer; */
-    display: flex; /* Arrange icons horizontally */
-    justify-content: space-between; /* Distribute icons evenly */
-    align-items: center; /* Align icons vertically in the center */
-  /* Optional: Add some margin or padding */
-    margin: 20px 20px; /* Margin top and bottom */
-    padding: 5px 5px; /* Padding around the icons */
-    /* border: 1px red solid; */
-    text-align: center;
-  
-}
 
 .p p{
   color: yellow;
@@ -900,18 +905,22 @@ section {
 
 
 
+   /*media icons*/
+
+
 .home-sci  {
   margin-top: 2rem;
-      display: flex;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    /* position: absolute; */
     align-items: center;
     text-align: center;
+    justify-content: center;
+    border: groove;
+    border-bottom: hidden;
+    /* position: absolute; */
 }
 
 .home-sci a {
-  
   color: inherit; /* Inherit font color from parent element */
   text-decoration: none; /* Remove underline from anchor tags */
   /* Optional: Add some margin between icons */
@@ -3388,7 +3397,7 @@ justify-content: space-evenly;
 /* START OF 600PX  */
 @media screen and (max-width: 600px) {
   *{
-    font-size: clamp(1.8rem,calc(5vw + 1rem), 1rem);
+    font-size: clamp(1rem,calc(5vw + 1rem), 1rem);
     margin: 0;
     padding: 0;
     /* height: 100vh;
@@ -3413,17 +3422,21 @@ justify-content: space-evenly;
     align-items: center;
   }
 
+  .logo  {
+    font-size: clamp(.1rem, calc(5vw + 1rem), 0.5rem);
+
+  }
+
   .logo img {
-    height: 4em;
-    width: 8em; 
-    border-radius: 8px;
+   height: 3em;
+        width: 4em;
   }
 
   header .bx-chat {
-    font-size: 2rem;
+    /* font-size: 2rem; */
   }
   header .bx-cart-add{
-    font-size: 2rem;
+    /* font-size: 2rem; */
   }
   
 
@@ -3437,18 +3450,18 @@ justify-content: space-evenly;
   
   
   .viewers i {
-    font-size: 15px;
-    font-weight: 500;
+    /* font-size: 15px; */
+    /* font-weight: 500; */
     color: red;
     border-radius: 0px 8px;
     
   }
   
   .viewers p {
-    font-size: 10px;
-    padding: 4px 4px;
+    /* font-size: 10px; */
+    /* padding: 4px 4px;
     border-radius: 50%;
-    font-weight: 600;
+    font-weight: 600; */
     color: red;
     border: groove;
     /* width: fit-content;
@@ -3477,7 +3490,7 @@ justify-content: space-evenly;
     align-items: center;
     justify-content: center;
     height: 50px;
-    width: 200px;
+    width: fit-content;
    
   }
   
@@ -3567,7 +3580,7 @@ justify-content: space-evenly;
   }
 
   .btn-box .btn {
-  display: inline-flex;
+  /* display: inline-flex; */
         padding: 0.5rem;
         /* margin-bottom: 1rem; */
         margin: 2px;
@@ -3576,17 +3589,13 @@ justify-content: space-evenly;
 
 
   .btn-box .download {
-  justify-content: space-evenly;
-  align-items: center;
-  align-items: center;
-  background: green;
   margin: 1rem;
  
  }
 
 
   .btn-box .download a {
-  font-size: clamp(1.5rem, calc(1vw + 1rem), 1rem);
+  font-size: clamp(1rem, calc(1vw + 1rem), 1rem);
   color: #fff;
  
  }
@@ -3611,10 +3620,34 @@ justify-content: space-evenly;
   .p .bx {
   
   }
+
+  }
+.check{
+/*  */
+}
+
+.check p{
+  padding-bottom: 7rem;
+  font-size: clamp(1rem, calc(1vw + 1rem), 1rem);
+    font-family: "poppins",sans-serif;
+    border: groove ;
+    border-radius: 10px;
+}
+
+
+.check .span_1{
+    font-size: clamp(2rem, calc(1vw + 1rem), 1rem);
+}
+
+.check .span_2{
+  font-size: clamp(2rem, calc(1vw + 1rem), 1rem);
+}
+
  
 
   .home-sci a i{
-   
+   font-size: clamp(1.8rem, calc(1vw + 1rem), 1rem);
+    margin: .2rem;
   }
 
   .projects-container{
