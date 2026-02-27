@@ -490,10 +490,10 @@ section {
 .home-imgHover  {
   position: absolute;
   top: 0;
-  bottom: 10px;
-  right: 15em;
-  width: fit-content;
-  height: 99%;
+  right: 7em;
+  width: 41%;
+  height: 100vh;
+  height: 100dvh;
   background: transparent;
   /* border: 2px solid red; */
   transition: 3s;
@@ -3521,22 +3521,20 @@ justify-content: space-evenly;
     border: #555 1px solid;
        background: url('/images/about.erase.zoom.jpg') no-repeat center;
       background-size: cover;
-      /* background-size: 100%; */
-      width: 50%;
-      overflow: scroll;
-      background-position-x: right; 
+      overflow-x: scroll;
 }
 
 
 
 .home-imgHover  {
+  right: 5.5rem;
  
 }
 
 
 .home-imgHover:hover {
-  background: var(--bg-color);
-  opacity: .8;
+  /* background: var(--bg-color);
+  opacity: .8; */
 }
 
 
@@ -3546,7 +3544,7 @@ justify-content: space-evenly;
   background: #000;
   overflow: hidden;
   border: grey 1px solid;
-  overflow: hidden;
+  overflow-y: scroll;
  }
 
 
