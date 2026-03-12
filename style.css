@@ -921,7 +921,7 @@ border: groove;
 
 
 .home-sci  {
-  margin-top: 2rem;
+  margin: 2rem;
     display: inline-flex;
     flex-wrap: wrap;
     align-items: center;
@@ -3478,30 +3478,40 @@ justify-content: space-evenly;
 
   
   .email-chat-container h4 {
-    display: flex;
-    font-size: 1.5em;
-    text-shadow: 1px 2px #000;
-    width: 20rem;
-    margin-bottom: 30px;
+            display: flex;
+        /* font-size: 1.5em; */
+        font-size: clamp(3rem, calc(1vw + 1rem), 1rem);
+        text-shadow: 1px 2px #000;
+        margin: 3rem;
   }
 
   .email-chat-container {
   /*  */
+  height: 100dvh;
+  height: 100vh;
+  text-align: center;
+
   }
  
 
   .email-chat-box {
     overflow: hidden;
     align-items: center;
+    text-align: center;
     justify-content: center;
-    height: 50px;
     width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* padding: 5px 5px; */
    
   }
   
 
   .email-chat-box a {
-    font-size: 1em;
+    /* padding: 20px; */
+   font-size: clamp(2rem, calc(1vw + 1rem), 1rem);
+   border-radius: 20px;
   }
 
 
@@ -3650,6 +3660,7 @@ justify-content: space-evenly;
   .home-sci {
    font-size: clamp(2rem, calc(1vw + 1rem), 1rem);
    padding: 1rem;
+   gap: .5rem;
   }
 
  
