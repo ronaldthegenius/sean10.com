@@ -1005,7 +1005,7 @@ border: groove;
 
 .projects-container h2 {
  padding: 5px 5px;
-  font-size: 5em;
+ font-size: clamp(5rem, calc(5vw + 1rem), 1rem);
   width: fit-content;
   border-radius: 8px;
   background: black;
@@ -1023,7 +1023,7 @@ border: groove;
 
 
 .projects-container h2 span  {
-  font-size: clamp(2rem, calc(5vw + 1rem), 1rem);
+  font-size: clamp(3rem, calc(5vw + 1rem), 1rem);
   color: var(--main-color);
  
 }
@@ -1391,7 +1391,7 @@ border: groove;
 .products-preview .preview   h2 {
   margin: 2rem;
   padding:4px 7px;
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, calc(5vw + 1rem), 1rem);
     margin-bottom: 1rem; 
     text-transform: uppercase;
    background: #000;
@@ -1401,6 +1401,7 @@ border: groove;
    width: fit-content;
   
 }
+
 
 
 .products-preview .preview  .iframe {
@@ -1587,11 +1588,10 @@ border: groove;
   position: absolute;
   top: .3rem;
   right: 2rem;
-  font-size: 28px;
   color: #777;
   cursor: pointer;
   transition: all 0.4s ease;
-  font-size: 4rem;
+  font-size: clamp(4rem, calc(5vw + 1rem), 1rem);
  }
 
  .products-preview .preview .fa-times:hover{
@@ -1606,7 +1606,7 @@ border: groove;
  .products-preview .preview h3{
   color: #27ae60;
   padding: .5rem 0;
-  font-size: 2.5rem;
+  font-size: clamp(2.4rem, calc(5vw + 1rem), 1rem);
   text-transform: lowercase;
  }
 
@@ -1621,7 +1621,7 @@ border: groove;
 
  .products-preview .preview .stars{
   padding: 1rem 0;
-  font-size: 1.7rem;
+  font-size: clamp(1.7rem, calc(5vw + 1rem), 1rem);
  }
 
  .products-preview .preview .stars i{
@@ -3634,7 +3634,7 @@ justify-content: space-evenly;
   
   }
 
-  }
+  
 .check{
 /*  */
 }
@@ -3676,13 +3676,18 @@ justify-content: space-evenly;
   }
 
 .projects-container h2 {
-  font-size:2rem;
-  background: gray;
-  color: blue;
-  margin:1em;
-  border-radius:  0px 10px ;
-  padding: 4px 4px;
-  word-spacing: 2px;
+        font-size: clamp(1rem, calc(5vw + 1rem), 1rem);
+        background: gray;
+        color: blue;
+        margin: 1em;
+        border-radius: 0px 10px;
+        padding: 4px 4px;
+        word-spacing: 2px;
+}
+
+
+.projects-container h2 span {
+        font-size: clamp(1.5em, calc(5vw + 1rem), 1rem);
 }
 
 
@@ -3929,10 +3934,11 @@ background: #000;
  } */
 
  .products-preview .preview .fa-times{
-    display: flex;
-        left: 2rem;
+            display: flex;
+        left: -6em;
         /* padding: 2px 2px; */
-        font-size: 3rem;
+        /* font-size: 3rem; */
+        font-size: clamp(3rem, calc(5vw + 1rem), 1rem);
         /* background-color: #000; */
         border-radius: 50%;
         padding: 5px;
@@ -4247,7 +4253,7 @@ padding: 5px 5px;
 font-size: 12px;
 }
 /* end of ans */
-/* end of read-more */
+/* end of read-more */}
 
 
 
