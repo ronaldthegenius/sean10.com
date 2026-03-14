@@ -1004,6 +1004,11 @@ border: groove;
 
 
 .projects-container h2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
  padding: 5px 5px;
  font-size: clamp(5rem, calc(5vw + 1rem), 1rem);
   width: fit-content;
