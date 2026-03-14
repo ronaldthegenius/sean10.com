@@ -3676,7 +3676,7 @@ justify-content: space-evenly;
   }
 
 .projects-container h2 {
-        font-size: clamp(1rem, calc(5vw + 1rem), 1rem);
+        font-size: clamp(2rem, calc(5vw + 1rem), 1rem);
         background: gray;
         color: blue;
         margin: 1em;
