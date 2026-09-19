@@ -1260,7 +1260,7 @@ color: lightgoldenrodyellow;
   margin: 1rem 0 3rem;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 4; /* Adjust the number of lines as needed */
+  -webkit-line-clamp: 2; /* Adjust the number of lines as needed */
   -webkit-box-orient: vertical;
   /* overflow: hidden; */
   text-overflow: ellipsis;
