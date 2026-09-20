@@ -3720,6 +3720,9 @@ justify-content: space-evenly;
         font-size: clamp(1.5em, calc(5vw + 1rem), 1rem);
 }
 
+#sean10{
+  font-size: clamp(0.75rem, 1rem + 5vw, 0.2287em);
+}
 
   .projects-container  .slot-container .projects-box h3 {
   font-size:12px;
@@ -3775,12 +3778,13 @@ justify-content: space-evenly;
 .projects-container .slot-container .projects-box p  {
   font-size: 10px;
   padding: 10px;
-  margin-bottom: 7px;
+  margin-bottom: 4px;
+          -webkit-line-clamp: 2;
 }
 
 
 .projects-container .slot-container .projects-box mark  {
-  font-size: 12px;
+  font-size:9px;
   color: #000;
   text-shadow: none;
   border: groove;
@@ -5518,14 +5522,14 @@ font-size: 12px;
 
 
 .projects-container .slot-container .projects-box p  {
-  font-size: 10px;
+  /* font-size: 10px; */
   padding: 10px;
-  margin-bottom: 7px;
+  /* margin-bottom: 7px; */
 }
 
 
 .projects-container .slot-container .projects-box mark  {
-  font-size: 12px;
+  font-size: 8px;
   color: #000;
   text-shadow: none;
   border: groove;
