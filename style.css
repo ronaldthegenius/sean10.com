@@ -1260,7 +1260,7 @@ color: lightgoldenrodyellow;
   margin: 1rem 0 3rem;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Adjust the number of lines as needed */
+  -webkit-line-clamp: 4; /* Adjust the number of lines as needed */
   -webkit-box-orient: vertical;
   /* overflow: hidden; */
   text-overflow: ellipsis;
@@ -3778,12 +3778,13 @@ justify-content: space-evenly;
 .projects-container .slot-container .projects-box p  {
   font-size: 10px;
   padding: 10px;
-  margin-bottom: 7px;
+  margin-bottom: 4px;
+          -webkit-line-clamp: 2;
 }
 
 
 .projects-container .slot-container .projects-box mark  {
-  font-size: 12px;
+  font-size:9px;
   color: #000;
   text-shadow: none;
   border: groove;
@@ -5521,14 +5522,14 @@ font-size: 12px;
 
 
 .projects-container .slot-container .projects-box p  {
-  font-size: 10px;
+  /* font-size: 10px; */
   padding: 10px;
-  margin-bottom: 7px;
+  /* margin-bottom: 7px; */
 }
 
 
 .projects-container .slot-container .projects-box mark  {
-  font-size: 12px;
+  font-size: 8px;
   color: #000;
   text-shadow: none;
   border: groove;
